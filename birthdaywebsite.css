@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.language-selector button {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: white;
+    color: pink;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.language-selector button:hover {
+    background-color: #ffccff;
+}
+
+#confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
