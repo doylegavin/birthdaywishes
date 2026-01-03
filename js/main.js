@@ -32,6 +32,7 @@ function updateBirthdayMessage() {
     const countdownElement = document.getElementById('countdown');
     const languageSelector = document.querySelector('.language-selector');
     const confettiCanvas = document.getElementById('confetti');
+    const ticTacToeGame = document.getElementById('tictactoe-game');
     
     if (isBirthday()) {
         // IT'S VIVIENNE'S BIRTHDAY! Show everything with celebration
@@ -46,15 +47,16 @@ function updateBirthdayMessage() {
         messageElement.innerHTML = birthdayMessages[currentLang].replace(/\n/g, '<br>');
         messageElement.style.display = 'block';
         
-        // Hide countdown, show birthday elements
+        // Hide countdown and game, show birthday elements
         countdownElement.style.display = 'none';
+        ticTacToeGame.style.display = 'none';
         languageSelector.style.display = 'block';
         confettiCanvas.style.display = 'block';
         
         // Add birthday celebration class for special styling
         document.body.classList.add('birthday-celebration');
     } else {
-        // NOT the birthday yet - hide everything except countdown
+        // NOT the birthday yet - show countdown and game
         const daysUntil = calculateDaysUntilBirthday();
         
         const countdownTexts = {
@@ -66,10 +68,11 @@ function updateBirthdayMessage() {
         
         const currentLang = messageElement.getAttribute('data-lang') || 'en';
         
-        // Hide birthday message and show countdown
+        // Hide birthday message and show countdown + game
         messageElement.style.display = 'none';
         countdownElement.textContent = countdownTexts[currentLang];
         countdownElement.style.display = 'block';
+        ticTacToeGame.style.display = 'block';
         
         // Hide language selector and confetti until birthday
         languageSelector.style.display = 'none';

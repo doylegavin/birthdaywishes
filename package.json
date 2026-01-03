@@ -6,7 +6,7 @@
   "scripts": {
     "start": "live-server --port=3000 --open=/index.html",
     "dev": "live-server --port=3000 --open=/index.html --watch=.",
-    "build": "mkdir -p public && cp index.html styles.css public/ && cp -r js public/",
+    "build": "mkdir -p public && cp index.html styles.css public/ && mkdir -p public/js && cp js/*.js public/js/",
     "serve": "live-server --port=8080 --open=/index.html"
   },
   "devDependencies": {
